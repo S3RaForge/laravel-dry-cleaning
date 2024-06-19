@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\Sluggable;
+
+class Service extends Model
+{
+    use HasFactory, Sluggable;
+
+    protected $fillable = ['name', 'price', 'description'];
+
+    public function sluggable(): array {
+        return [
+            'slug' => [
+                'source' => 'name'
+            ]
+        ];
+    }
+
+    function orders() {
+        return $this->belongsToMany(Order::class);
+    }
+}

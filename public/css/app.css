@@ -1,0 +1,52 @@
+body {
+    height: 100%;
+    padding-top: 31px;
+}
+
+.text-big {
+    font-size: 100px;
+}
+
+.login-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 50px;
+}
+
+.custom-div {
+    position: relative;
+    background-image: url('../home-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 40px;
+    width: 100%;
+    height: 600px;
+    text-align: center;
+}
+.custom-div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: auto;
+}
+.custom-div h1 {
+    position: sticky;
+    margin-top: 200px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    z-index: 1;
+}
+.custom-div .btn {
+    position: sticky;
+    margin-right: 10px; 
+    z-index: 1;
+}
